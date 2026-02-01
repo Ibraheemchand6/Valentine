@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="title" id="crushName">💖</h1>
+
+    <h2>Will you be my Valentine?</h2>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes 💘</button>
+      <button id="noBtn">No 💔</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>Yayyy!!! 😭💖</h2>
+      <p>You just made my day 🌸</p>
+
+      <img src="image.png">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+
+    if (name) {
+      document.getElementById("crushName").innerText = name + " 💖";
+    } else {
+      document.getElementById("crushName").innerText = "My Love 💖";
+    }
+  </script>
+
+</body>
+</html>
